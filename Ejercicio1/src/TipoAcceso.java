@@ -1,4 +1,4 @@
 
-public class TipoAcceso {
-
+public enum TipoAcceso {
+	CONSULTA, MODIFICACION, CREACION, ARCHIVO
 }
