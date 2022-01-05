@@ -14,7 +14,7 @@ public class Paciente {
 		return expedienteAbierto;
 	}
 	
-	public void setExpedienteAbierto(Expediente expedienteAbierto) throws AssertionError{
+	protected void setExpedienteAbierto(Expediente expedienteAbierto) throws AssertionError{
 		assert(expendientesContiene(expedienteAbierto));
 		this.expedienteAbierto = expedienteAbierto;
 	}

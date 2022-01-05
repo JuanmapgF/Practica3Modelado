@@ -27,7 +27,4 @@ public class Acceso {
 	public TipoAcceso getTipo() {
 		return tipo;
 	}
-	private boolean noFechasFuturas(Date fecha) {
-		return fecha.compareTo(new Date()) <= 0;
-	}
 }
