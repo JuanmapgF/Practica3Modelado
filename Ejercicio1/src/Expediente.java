@@ -9,6 +9,7 @@ public class Expediente {
 	public Expediente(Paciente paciente) {
 		this.paciente = paciente;
 		accesos = new ArrayList<>();
+		paciente.addExpediente(this);
 	}
 	
 	public Paciente getPaciente() {

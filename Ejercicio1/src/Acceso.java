@@ -6,10 +6,7 @@ public class Acceso {
 	private Date fecha;
 	private TipoAcceso tipo;
 	
-	public Acceso(Profesional profesional, Expediente expediente, Date fecha, TipoAcceso tipo) throws AssertionError{
-		
-		assert(noFechasFuturas(fecha)); // Que se indique un acceso en el dia o en dias anteriores
-		
+	public Acceso(Profesional profesional, Expediente expediente, Date fecha, TipoAcceso tipo) {		
 		this.profesional = profesional;
 		this.expediente = expediente;
 		this.fecha = fecha;
