@@ -9,7 +9,7 @@ public class Empty implements Estado{
 			bandeja.setEstado(new Full());
 		}
 		
-		bandeja.addPieza(pieza);;
+		bandeja.addPieza(pieza);
 	}
 	
 	@Override
