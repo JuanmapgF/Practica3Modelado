@@ -14,16 +14,8 @@ public abstract class Trabajador {
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 	public String getNumeroSeguridadSocial() {
 		return numeroSeguridadSocial;
-	}
-
-	public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
-		this.numeroSeguridadSocial = numeroSeguridadSocial;
 	}
 
 	public double nomina() {
