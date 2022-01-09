@@ -11,10 +11,11 @@ public class MedioPensionista extends Trabajador{
 		this.pensionista = new Pensionista(nombre, numeroSeguridadSocial, salarioPensionista);
 	}
 
-	public void incrementar() {
+	@Override
+	protected void incrementar() {
 		this.activo.incrementar();
 		this.pensionista.incrementar();
-		super.salario = this.activo.salario + this.pensionista.salario;
+		super.salario = this.activo.nomina() + this.pensionista.nomina();
 	}
 
 }
