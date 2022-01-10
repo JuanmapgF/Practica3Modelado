@@ -8,16 +8,19 @@ public class Bandeja {
 	private Estado estado;
 	
 	public Bandeja(int capacidad) {
-		if(capacidad < 1)
-			throw new RuntimeException("No se puede crear una bandeja con capacidad cero o negativa.");
+		if(capacidad < 1)	
+			throw new MartilloException("La capacidad tiene que ser positiva");
 		
 		this.capacidad = capacidad;
 		this.piezas = new ArrayList<>();
-		this.estado = new Empty();
+		this.estado = Empty.getInstance();
 	}
 	
 	public void put(Pieza pieza) {
+		if(pieza.getBandeja() != null)
+			throw new MartilloException("La pieza ya está en una bandeja");
 		estado.put(pieza, this);
+		pieza.setBandeja(this);
 	}
 	
 	public Pieza get() {
@@ -28,7 +31,7 @@ public class Bandeja {
 		return capacidad;
 	}
 
-	public void setEstado(Estado estado) {
+	protected void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 
