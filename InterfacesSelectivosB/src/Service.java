@@ -1,7 +1,7 @@
 
 public interface Service {
-	public void rutina1();
-	public void rutina2(Double y);
-	public Boolean rutina3(Integer i);
-	public Integer rutina4();
+	public abstract void rutina1();
+	public abstract void rutina2(Double y);
+	public abstract Boolean rutina3(Integer i);
+	public abstract Integer rutina4();
 }
